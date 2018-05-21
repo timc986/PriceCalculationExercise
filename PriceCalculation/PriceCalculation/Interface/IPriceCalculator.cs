@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PriceCalculation
+namespace PriceCalculation.Interface
 {
-    public class Class1
+    public interface IPriceCalculator
     {
+
     }
 }
