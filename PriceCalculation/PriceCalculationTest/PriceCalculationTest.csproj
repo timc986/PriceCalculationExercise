@@ -66,6 +66,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\BreadTest.cs" />
+    <Compile Include="Model\ButterTest.cs" />
+    <Compile Include="Model\MilkTest.cs" />
     <Compile Include="PriceCalculatorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
