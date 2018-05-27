@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PriceCalculation.Model;
 
 namespace PriceCalculation.Interface
 {
     public interface IPriceCalculator
     {
-
+        double Calculate(Basket basket);
     }
 }

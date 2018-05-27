@@ -138,7 +138,7 @@ namespace PriceCalculationTest
         }
 
         [Test]
-        public void GIVEN_the_basket_has_no_item_WHEN_I_total_the_basket_THEN_the_total_should_be_0()
+        public void GIVEN_the_basket_has_no_product_WHEN_I_total_the_basket_THEN_the_total_should_be_0()
         {
             //Arrange
             var request = new Basket(){};
@@ -160,6 +160,7 @@ namespace PriceCalculationTest
             Assert.AreEqual(0, result);
         }
 
+        //Set up the cost for each product
         private Basket SetUpBasket()
         {
             return new Basket()
