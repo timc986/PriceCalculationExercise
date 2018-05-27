@@ -89,6 +89,54 @@ namespace PriceCalculationTest
         }
 
         [Test]
+        public void GIVEN_the_basket_has_1_bread_WHEN_I_total_the_basket_THEN_the_total_should_be_1()
+        {
+            //Arrange
+            var request = new Basket()
+            {
+                Bread = new Bread() { Amount = 1 }
+            };
+
+            //Act
+            var result = priceCalculator.Calculate(request);
+
+            //Assert
+            Assert.AreEqual(1, result);
+        }
+
+        [Test]
+        public void GIVEN_the_basket_has_1_butter_WHEN_I_total_the_basket_THEN_the_total_should_be_0_8()
+        {
+            //Arrange
+            var request = new Basket()
+            {
+                Butter = new Butter() { Amount = 1 }
+            };
+
+            //Act
+            var result = priceCalculator.Calculate(request);
+
+            //Assert
+            Assert.AreEqual(0.8, result);
+        }
+
+        [Test]
+        public void GIVEN_the_basket_has_1_milk_WHEN_I_total_the_basket_THEN_the_total_should_be_1_15()
+        {
+            //Arrange
+            var request = new Basket()
+            {
+                Milk = new Milk() { Amount = 1 }
+            };
+
+            //Act
+            var result = priceCalculator.Calculate(request);
+
+            //Assert
+            Assert.AreEqual(1.15, result);
+        }
+
+        [Test]
         public void GIVEN_the_basket_has_0_butter_0_bread_0_milk_WHEN_I_total_the_basket_THEN_the_total_should_be_0()
         {
             //Arrange
