@@ -41,6 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interface\IPriceCalculator.cs" />
+    <Compile Include="Model\Basket.cs" />
+    <Compile Include="Model\Bread.cs" />
+    <Compile Include="Model\Butter.cs" />
+    <Compile Include="Model\Milk.cs" />
+    <Compile Include="Model\Product.cs" />
     <Compile Include="PriceCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
