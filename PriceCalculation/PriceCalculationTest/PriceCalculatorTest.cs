@@ -43,7 +43,8 @@ namespace PriceCalculationTest
             //Arrange
             var request = new Basket()
             {
-
+                Bread = new Bread() { Amount = 2 },
+                Butter = new Butter() { Amount = 2 }
             };
 
             //Act
@@ -59,7 +60,7 @@ namespace PriceCalculationTest
             //Arrange
             var request = new Basket()
             {
-
+                Milk = new Milk() { Amount = 4 }
             };
 
             //Act
@@ -75,7 +76,9 @@ namespace PriceCalculationTest
             //Arrange
             var request = new Basket()
             {
-
+                Bread = new Bread() { Amount = 1 },
+                Butter = new Butter() { Amount = 2 },
+                Milk = new Milk() { Amount = 8 }
             };
 
             //Act
@@ -83,6 +86,47 @@ namespace PriceCalculationTest
 
             //Assert
             Assert.AreEqual(9, result);
+        }
+
+        [Test]
+        public void GIVEN_the_basket_has_0_butter_0_bread_0_milk_WHEN_I_total_the_basket_THEN_the_total_should_be_0()
+        {
+            //Arrange
+            var request = new Basket()
+            {
+                Bread = new Bread() { Amount = 0 },
+                Butter = new Butter() { Amount = 0 },
+                Milk = new Milk() { Amount = 0 }
+            };
+
+            //Act
+            var result = priceCalculator.Calculate(request);
+
+            //Assert
+            Assert.AreEqual(0, result);
+        }
+
+        [Test]
+        public void GIVEN_the_basket_has_no_item_WHEN_I_total_the_basket_THEN_the_total_should_be_0()
+        {
+            //Arrange
+            var request = new Basket(){};
+
+            //Act
+            var result = priceCalculator.Calculate(request);
+
+            //Assert
+            Assert.AreEqual(0, result);
+        }
+
+        [Test]
+        public void GIVEN_null_WHEN_I_total_the_basket_THEN_the_total_should_be_0()
+        {
+            //Act
+            var result = priceCalculator.Calculate(null);
+
+            //Assert
+            Assert.AreEqual(0, result);
         }
     }
 }
