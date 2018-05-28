@@ -2,6 +2,6 @@
 {
     public class Product
     {
-        public double Amount { get; set; }        
+        public int Amount { get; set; }        
     }
 }

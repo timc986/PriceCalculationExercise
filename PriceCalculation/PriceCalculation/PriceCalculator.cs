@@ -16,17 +16,17 @@ namespace PriceCalculation
                 return total;
             }
 
-            if(basket.Butter != null)
+            if(basket.Butter?.Amount > 0)
             {
                 total += basket.Butter.GetPrice();
             }            
 
-            if(basket.Bread != null)
+            if(basket.Bread?.Amount > 0)
             {
                 total += basket.Bread.GetPrice(basket.Butter!= null ? basket.Butter.Amount : 0);
             }           
 
-            if(basket.Milk != null)
+            if(basket.Milk?.Amount > 0)
             {
                 total += basket.Milk.GetPrice();
             }           

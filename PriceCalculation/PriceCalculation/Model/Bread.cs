@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PriceCalculation.Model
+﻿namespace PriceCalculation.Model
 {
     public class Bread: Product
     {
@@ -15,9 +13,9 @@ namespace PriceCalculation.Model
         //Rich data model
         //Logic to calculate price inside the model class
         //Can be easily reused in other class for future development
-        public double GetPrice(double ButterAmount)
+        public double GetPrice(int ButterAmount)
         {
-            return (Cost * Amount) - Math.Floor((ButterAmount / 2)) * Cost * 0.5;
+            return (Cost * Amount) - (ButterAmount / 2) * Cost * 0.5;
         }
     }
 }

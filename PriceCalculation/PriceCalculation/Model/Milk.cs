@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PriceCalculation.Model
+﻿namespace PriceCalculation.Model
 {
     public class Milk: Product
     {
@@ -17,7 +15,7 @@ namespace PriceCalculation.Model
         //Can be easily reused in other class for future development
         public double GetPrice()
         {
-            return (Cost * Amount) - Math.Floor(Amount / 3) * Cost;
+            return (Cost * Amount) - (Amount / 3) * Cost;
         }
     }
 }
